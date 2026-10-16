@@ -19,3 +19,8 @@ UPDATE plat SET id_categorie = 4 WHERE id = 6;
 UPDATE plat SET id_categorie = 5 WHERE id = 7;
 
 ALTER TABLE plat ALTER COLUMN id_categorie SET NOT NULL;
+
+INSERT INTO categorie(libelle) VALUES ('Plat italien');
+
+SELECT categorie.libelle, COUNT(plat.id) AS nombre FROM categorie LEFT JOIN plat ON categorie.id = plat.id_categorie GROUP BY plat.id_categorie, categorie.libelle;
+

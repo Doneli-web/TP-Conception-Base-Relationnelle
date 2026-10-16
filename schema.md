@@ -16,3 +16,13 @@
 - **Schema relationnel :**
     - PLAT(**id**, #id_categorie, libelle, prix) (modifié)
     - CATEGORIE(**id**, libelle) (nouveau)
+
+#### Etape 3 :
+- **Reponses :**
+    - On a place la quantite dans la table ligne_commande
+
+- **Schema relationnel :**
+    - PLAT(**id**, #id_categorie, libelle, prix)
+    - CATEGORIE(**id**, libelle)'
+    - COMMANDE(**id**, date) (nouveau)
+    - LIGNE_COMMANDE(**id**, **#id_plat**, **#id_commande**, quantite) (nouveau)
