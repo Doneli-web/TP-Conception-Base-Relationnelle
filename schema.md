@@ -25,4 +25,16 @@
     - PLAT(**id**, #id_categorie, libelle, prix)
     - CATEGORIE(**id**, libelle)'
     - COMMANDE(**id**, date) (nouveau)
-    - LIGNE_COMMANDE(**id**, **#id_plat**, **#id_commande**, quantite) (nouveau)
+    - LIGNE_COMMANDE(**id**, #**id_plat**, #**id_commande**, quantite) (nouveau)
+
+#### Etape 4 :
+- **Reponses :**
+    - Ma cle etrangere n'est pas NULL
+    - Pour ne perdre aucune commande, il faut la jointure 'LEFT JOIN'
+
+- **Schema relationnel :**
+    - PLAT(**id**, #id_categorie, libelle, prix)
+    - CATEGORIE(**id**, libelle)'
+    - COMMANDE(**id**, date, id_client) (modifié)
+    - LIGNE_COMMANDE(**id**, #**id_plat**, #**id_commande**, quantite)
+    - CLIENT(**id**, nom) (nouveau)
